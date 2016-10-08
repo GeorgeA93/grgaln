@@ -1,0 +1,11 @@
+<div *ngIf="spinnerService.isRunning" class="spinner-wrapper">
+  <div>
+    <div class="message">
+      <h2>{{spinnerService.message}}</h2>
+    </div>
+    <br />
+    <div class="spinner">
+      <app-wave [isRunning]="spinnerService.isRunning"></app-wave>
+    </div>
+  </div>
+</div>

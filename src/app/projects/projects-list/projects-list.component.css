@@ -1,0 +1,15 @@
+.fukol-grid {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5em;
+}
+
+.fukol-grid > * {
+    flex: 1 0 20em;
+    margin: 0.5em;
+}
+
+.project {
+    padding: 15px;
+}

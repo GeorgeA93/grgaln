@@ -1,0 +1,7 @@
+<div class="fukol">
+  <div class="fukol-grid">
+    <div class="project" *ngFor="let project of projects">
+      <app-project-item [projectTitle]="project.title" [projectSubTitle]="project.subTitle" [projectContent]="project.content"></app-project-item>
+    </div>
+  </div>
+</div>
