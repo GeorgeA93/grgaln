@@ -20,14 +20,7 @@ export class HomeComponent implements OnInit {
   // TODO Pagenagation for projects
 
   login() {
-    this.af.auth.login({
-      email: 'george.allen93@outlook.com',
-      password: '1!0Pullman',
-    },
-      {
-        provider: AuthProviders.Password,
-        method: AuthMethods.Password,
-      })
+
   }
 
   logout() {

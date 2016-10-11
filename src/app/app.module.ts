@@ -7,13 +7,7 @@ import { GrgalnRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-
-export const firebaseConfig = {
-  apiKey: 'AIzaSyAlfUraiDYSSKVnQmUAFv1w3SDRFs1uthg',
-  authDomain: 'grgaln-portfolio.firebaseapp.com',
-  databaseURL: 'https://grgaln-portfolio.firebaseio.com',
-  storageBucket: ''
-};
+import { firebaseConfig } from '../sensitive/firebase.config';
 
 const myFirebaseAuthConfig = {
   provider: AuthProviders.Google,
