@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { GrgalnRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyAlfUraiDYSSKVnQmUAFv1w3SDRFs1uthg',
@@ -14,6 +14,11 @@ export const firebaseConfig = {
   databaseURL: 'https://grgaln-portfolio.firebaseio.com',
   storageBucket: ''
 };
+
+const myFirebaseAuthConfig = {
+  provider: AuthProviders.Google,
+  method: AuthMethods.Redirect
+}
 
 @NgModule({
   declarations: [
