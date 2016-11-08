@@ -3,9 +3,16 @@
 @import "~bootstrap/dist/css/bootstrap.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
 @import 'https://fonts.googleapis.com/css?family=Ubuntu';
+html, body {
+	height: 100%;
+}
+
 body {
-	margin: 0;
 	font-family: 'Ubuntu', sans-serif;
+}
+
+.fixed {
+	position: fixed;
 }
 
 * {

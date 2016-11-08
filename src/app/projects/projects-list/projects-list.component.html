@@ -1,3 +1,7 @@
-<div class="project" *ngFor="let project of projects">
-  <app-project-item [projectTitle]="project.title" [projectSubTitle]="project.subTitle" [projectContent]="project.content"></app-project-item>
+<div class="row">
+  <div *ngFor="let project of projects">
+    <div class="col-md-6">
+      <app-project-item [projectTitle]="project.title" [projectSubTitle]="project.subTitle" [projectContent]="project.content"></app-project-item>
+    </div>
+  </div>
 </div>
