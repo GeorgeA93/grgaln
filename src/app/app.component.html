@@ -1,6 +1,7 @@
 <div>
   <app-spinner></app-spinner>
-  <md-toolbar color="primary">
+
+  <!--  <md-toolbar color="primary">
     <span>
       <button md-icon-button (click)="appMenu.toggle()" [ngSwitch]="appMenu.opened">
         <md-icon *ngSwitchCase="false" class="icon-20">menu</md-icon>
@@ -16,7 +17,9 @@
         <md-list-item routerLink="projects" routerLinkActive="active" (click)="appMenu.toggle()"> My Projects </md-list-item>
       </md-nav-list>
     </md-sidenav>
-    <!-- Routed views go here -->
     <router-outlet></router-outlet>
-  </md-sidenav-layout>
+  </md-sidenav-layout> -->
+
+  <!-- Routed views go here -->
+  <router-outlet></router-outlet>
 </div>
