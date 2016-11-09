@@ -3,9 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { throwIfAlreadyLoaded } from './module-import-guard';
-import { SpinnerComponent } from './spinner/spinner.component';
 import { SpinnerService } from './spinner.service';
-import { WaveComponent } from './wave/wave.component';
 
 @NgModule({
     imports: [
@@ -13,8 +11,8 @@ import { WaveComponent } from './wave/wave.component';
         RouterModule,
         HttpModule
     ],
-    declarations: [SpinnerComponent, WaveComponent],
-    exports: [SpinnerComponent],
+    declarations: [],
+    exports: [],
     providers: [
         SpinnerService
     ]

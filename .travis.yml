@@ -1,0 +1,30 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+- node
+addons: 
+apt:
+  sources:
+  - google-chrome
+  packages:
+  - google-chrome-stable
+  - google-chrome-beta
+before_install:
+- export CHROME_BIN=chromium-browser
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- npm install -g npm@'>=3.10.6'
+before_script:
+- npm install -g angular-cli
+- npm install -g karma
+- npm install
+- ng build --prod --base-href /
+script:
+- karma start karma.conf.js --single-run
+after_success:
+- bash deploy.sh
+env:
+  global:
+  - GITHUB_REPO: GeorgeA93/grgaln
+  - secure: nTiN1IMgXQylJ3XoZZ5SkwT9kB0WENCfx5qnnH1hQT5ps7/RW6FSULOuuzl7kPBY/Xi3jnmrEIcSSra2eBlpubt2c+mb18HRxply8+8OqnG//P3d5KJk/t7+BO8UnJLYEaLlIUWHksMlM0DuGE5k+x7eZlQMsVTdRBFS3IZDuUswPHxk3VgwXSPDW6y3IWfwat1VPmIGwxg/UbmQyHEnf8kBVN+AQiPg5xg6pEGvGN+Ij0gVKkyUYHG/aLwrLV+wvnO0YoV9y4bqaT6mucx/JABCm9GuRO2DhNtubL6eHX69J8n+ymBSHwqF9DEuslvvm2m4icW5YNu8JkfOwNDxPrS1jkNMElAwkGpZ87BrbCv3QLJ+ZDNVz+TVU36P9KiBPxyiWRsXYnXLhgpw5uI3GZEBIupyFRIIMIFxnAZHe9xJm6BoGi3iR918A99E30ZQKsUw2oWs5H4gpPPIwqE8/xSEjPxbW2osJaB3NmoHSpsLN0nSej31kDo/cVeoTvXyrAOl5/yMRnnAcnOMzHLIGEZLDFxCrLR0d2O7sD84ygzKixdB0JR3WlXDq4q5TaPG+ysdjhma1T5W5iibJrstidKz5QH6JQjRLpKretqjsIAL1a8PN8JfqKGQaFMavUQemQMonaEZ6WWjJau5O1nvzmRb9cdI1zfQ7JEdXwUciOA=

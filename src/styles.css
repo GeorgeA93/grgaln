@@ -1,44 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
-@import '~@angular/material/core/theming/prebuilt/indigo-pink.css';
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~font-awesome/css/font-awesome.min.css";
 @import 'https://fonts.googleapis.com/css?family=Ubuntu';
+html, body {
+	height: 100%;
+}
 
 body {
-    margin: 0;
-    font-family: 'Ubuntu', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 }
 
-md-toolbar {
-  position: fixed;
-  z-index: 1;
-}
-
-md-toolbar-row {
-  justify-content: space-between;
-}
-
-md-sidenav-layout {
-  height: 100vh;
-}
-
-md-sidenav {
-  padding-top: 80px;
-  width: 320px;
-  background-color: #212121 !important;
-}
-
-md-list-item {
-  color: #FAFAFA !important;
-}
-
-.icon-20 {
-    font-size: 20px;
+.fixed {
+	position: fixed;
 }
 
 * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code, pre, #ws, #message {

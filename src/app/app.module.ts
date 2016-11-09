@@ -1,34 +1,42 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { GrgalnRoutingModule } from './app-routing.module';
+import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-import { firebaseConfig } from '../sensitive/firebase.config';
 
 const myFirebaseAuthConfig = {
-  provider: AuthProviders.Google,
-  method: AuthMethods.Redirect
+    provider: AuthProviders.Google,
+    method: AuthMethods.Redirect
 }
 
+const firebaseConfig = {
+    apiKey: 'AIzaSyAlfUraiDYSSKVnQmUAFv1w3SDRFs1uthg',
+    authDomain: 'grgaln-portfolio.firebaseapp.com',
+    databaseURL: 'https://grgaln-portfolio.firebaseio.com',
+    storageBucket: ''
+};
+
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule,
-    GrgalnRoutingModule,
-    CoreModule,
-    MaterialModule.forRoot(),
-    AngularFireModule.initializeApp(firebaseConfig)
-  ],
-  providers: [
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HomeComponent
+    ],
+    imports: [
+        BrowserModule,
+        HttpModule,
+        SharedModule,
+        GrgalnRoutingModule,
+        CoreModule,
+        NgbModule.forRoot(),
+        AngularFireModule.initializeApp(firebaseConfig)
+    ],
+    providers: [
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
