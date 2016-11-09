@@ -1,7 +1,7 @@
 #!/bin/bash
 # See https://medium.com/@nthgergo/publishing-gh-pages-with-travis-ci-53a8270e87db
 
-if [[ $TRAVIS_BRANCH == 'master' ]]; then
+if [[ $TRAVIS_BRANCH == 'master' ] && [$TRAVIS_PULL_REQUEST] != "false"]; then
     set -o errexit
 
     # config
