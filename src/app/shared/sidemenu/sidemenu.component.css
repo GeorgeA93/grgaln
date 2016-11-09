@@ -13,8 +13,8 @@
     transition: all 0.5s ease;
 }
 
-#page-wrapper.toggled #sidebar-wrapper {
-    width: 150px;
+#sidebar-wrapper.toggled {
+    width: 0px;
 }
 
 
@@ -75,7 +75,7 @@
     #sidebar-wrapper {
         width: 150px;
     }
-    #page-wrapper.toggled #sidebar-wrapper {
+    #sidebar-wrapper.toggled {
         width: 0;
     }
 }

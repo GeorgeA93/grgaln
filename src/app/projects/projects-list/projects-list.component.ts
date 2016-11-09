@@ -17,14 +17,15 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+
     this.spinnerService.show("Loading Projects");
     this.projectsObservable.subscribe(
       (p) => {
-        this.projects = p;
-        this.spinnerService.hide();
+        //  this.projects = p;
+        //      this.spinnerService.hide();
       },
       (err) => {
-        this.spinnerService.hide();
+        //    this.spinnerService.hide();
       }
     );
   }
