@@ -1,11 +1,11 @@
-<div *ngIf="true" class="spinner-wrapper">
+<div *ngIf="spinnerService.isRunning" id="spinner-wrapper" [ngClass]="{ 'toggled': toggled }">
   <div>
     <div class="message">
       <h2>{{spinnerService.message}}</h2>
     </div>
     <br />
     <div class="spinner">
-      <app-wave [isRunning]="true"></app-wave>
+      <app-wave [isRunning]="spinnerService.isRunning"></app-wave>
     </div>
   </div>
 </div>
