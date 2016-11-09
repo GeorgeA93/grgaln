@@ -8,12 +8,18 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-import { firebaseConfig } from '../sensitive/firebase.config';
 
 const myFirebaseAuthConfig = {
     provider: AuthProviders.Google,
     method: AuthMethods.Redirect
 }
+
+const firebaseConfig = {
+    apiKey: 'AIzaSyAlfUraiDYSSKVnQmUAFv1w3SDRFs1uthg',
+    authDomain: 'grgaln-portfolio.firebaseapp.com',
+    databaseURL: 'https://grgaln-portfolio.firebaseio.com',
+    storageBucket: ''
+};
 
 @NgModule({
     declarations: [
