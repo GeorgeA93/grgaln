@@ -1,9 +1,9 @@
-import {Component, Input, OnDestroy} from "@angular/core";
+import { Component, Input, OnDestroy } from "@angular/core";
 
 @Component({
   selector: 'app-wave',
   templateUrl: './wave.component.html',
-  styleUrls: ['./wave.component.css']
+  styleUrls: ['./wave.component.scss']
 })
 export class WaveComponent implements OnDestroy {
 

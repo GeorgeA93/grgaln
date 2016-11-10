@@ -4,7 +4,7 @@ import * as Marked from 'marked';
 @Component({
   selector: 'app-project-item',
   templateUrl: './project-item.component.html',
-  styleUrls: ['./project-item.component.css']
+  styleUrls: ['./project-item.component.scss']
 })
 export class ProjectItemComponent implements OnInit {
 
@@ -13,7 +13,7 @@ export class ProjectItemComponent implements OnInit {
   @Input() projectContent: string;
   projectContentMd: string;
 
-  constructor() { 
+  constructor() {
   }
 
   ngOnInit() {
