@@ -5,24 +5,9 @@ import { DebugElement } from '@angular/core';
 
 import { ExperienceComponent } from './experience.component';
 
-describe('ExperienceComponent', () => {
-  let component: ExperienceComponent;
-  let fixture: ComponentFixture<ExperienceComponent>;
-
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ ExperienceComponent ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ExperienceComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
+describe('Component: Experience', () => {
+  it('should create an instance', () => {
+    let component = new ExperienceComponent();
     expect(component).toBeTruthy();
   });
 });
