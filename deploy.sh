@@ -12,6 +12,7 @@ if [[ $TRAVIS_BRANCH == 'master' ]]; then
         # deploy
         cd dist
         git init
+        echo "${CNAME}" >> CNAME
         git add .
         git commit -m "Deploy to Github Pages"
         git push --force --quiet "https://${GH_TOKEN}@github.com/${GITHUB_REPO}.git" master:gh-pages > /dev/null 2>&1
