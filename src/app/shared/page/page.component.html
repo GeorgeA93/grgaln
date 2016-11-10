@@ -1,14 +1,12 @@
 <div id="page-wrapper" [ngClass]="{ 'toggled': toggled }">
-  <app-sidemenu></app-sidemenu>
-  <div [style.background-color]="color">
-    <app-spinner></app-spinner>
-    <div id="page-content-wrapper">
-      <a class="btn btn-primary" (click)="toggleMenu()">
-        <i class="fa fa-bars fa-lg"></i>
-      </a>
-      <div class="container">
-        <ng-content></ng-content>
-      </div>
+  <app-sidemenu [toggled]="toggled"></app-sidemenu>
+  <app-spinner [toggled]="toggled"></app-spinner>
+  <div id="page-content-wrapper" [style.background-color]="color">
+    <a class="btn btn-primary" (click)="toggleMenu()">
+      <i class="fa fa-bars fa-lg"></i>
+    </a>
+    <div class="container-fluid">
+      <ng-content></ng-content>
     </div>
   </div>
 </div>

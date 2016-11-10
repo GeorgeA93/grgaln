@@ -1,4 +1,4 @@
-<div *ngIf="spinnerService.isRunning" class="spinner-wrapper">
+<div *ngIf="spinnerService.isRunning" id="spinner-wrapper" [ngClass]="{ 'toggled': toggled }">
   <div>
     <div class="message">
       <h2>{{spinnerService.message}}</h2>
