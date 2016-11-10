@@ -30,7 +30,7 @@
     "zone.js": "^0.6.23",
     "bootstrap": "^4.0.0-alpha.5",
     "font-awesome": "^4.7.0",
-    "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.11"
+    "@ng-bootstrap/ng-bootstrap": "1.0.0-alpha.11"
   },
   "devDependencies": {
     "@types/jasmine": "^2.2.30",
