@@ -3,35 +3,34 @@ import { SpinnerService } from '../../core/spinner.service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @Component({
-  selector: 'app-projects-list',
-  templateUrl: './projects-list.component.html',
-  styleUrls: ['./projects-list.component.css']
+    selector: 'app-projects-list',
+    templateUrl: './projects-list.component.html',
+    styleUrls: ['./projects-list.component.css']
 })
 export class ProjectsListComponent implements OnInit, OnDestroy {
 
-  private projectsObservable: FirebaseListObservable<any>;
-  projects: Array<any>;
+    private projectsObservable: FirebaseListObservable<any>;
+    projects: Array<any>;
 
-  constructor(private af: AngularFire, private spinnerService: SpinnerService) {
-    this.projectsObservable = this.af.database.list('/projects');
-  }
+    constructor(private af: AngularFire, private spinnerService: SpinnerService) {
+        this.projectsObservable = this.af.database.list('/projects');
+    }
 
-  ngOnInit() {
+    ngOnInit() {
+        this.spinnerService.show("Loading Projects");
+        this.projectsObservable.subscribe(
+            (p) => {
+                this.projects = p;
+                this.spinnerService.hide();
+            },
+            (err) => {
+                this.spinnerService.hide();
+            }
+        );
+    }
 
-    this.spinnerService.show("Loading Projects");
-    this.projectsObservable.subscribe(
-      (p) => {
-        this.projects = p;
+    ngOnDestroy(): any {
         this.spinnerService.hide();
-      },
-      (err) => {
-        this.spinnerService.hide();
-      }
-    );
-  }
-
-  ngOnDestroy(): any {
-    this.spinnerService.hide();
-  }
+    }
 
 }
