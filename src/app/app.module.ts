@@ -8,6 +8,7 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
+import { Angulartics2Module, Angulartics2GoogleAnalytics } from 'angulartics2';
 
 const myFirebaseAuthConfig = {
     provider: AuthProviders.Google,
@@ -33,9 +34,11 @@ const firebaseConfig = {
         GrgalnRoutingModule,
         CoreModule,
         NgbModule.forRoot(),
-        AngularFireModule.initializeApp(firebaseConfig)
+        AngularFireModule.initializeApp(firebaseConfig),
+        Angulartics2Module.forRoot()
     ],
     providers: [
+        Angulartics2GoogleAnalytics
     ],
     bootstrap: [AppComponent]
 })
