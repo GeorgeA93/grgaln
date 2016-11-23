@@ -17,7 +17,7 @@ export class ProjectsListComponent implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        this.spinnerService.show("Loading Projects");
+        this.spinnerService.show('Loading Projects');
         this.projectsObservable.subscribe(
             (p) => {
                 this.projects = p;
